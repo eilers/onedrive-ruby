@@ -5,5 +5,6 @@ module Onedrive
     def children_path
       "drive/items/#{id}/children"
     end
+
   end
 end

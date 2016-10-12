@@ -15,14 +15,9 @@ module Onedrive
       find_drive(id)
     end
 
-    def drives
-      find_drives
+    def connection
+      @connection ||= Onedrive::Connection.new(@token)
     end
-
-    def item(id)
-
-    end
-
     private
     def default_drive
       drive = connection.get('drive')
@@ -34,16 +29,5 @@ module Onedrive
       new_drive drive
     end
 
-    def find_drives
-      drives = connection.get('drives')
-      new_drives drives
-    end
-
-    def find_item(id)
-    end
-
-    def connection
-      @connection ||= Onedrive::Connection.new(@token)
-    end
   end
 end
