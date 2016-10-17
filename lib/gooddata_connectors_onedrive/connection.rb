@@ -6,7 +6,7 @@ module Onedrive
 
   class Connection
     def initialize(token)
-      options = {url: 'https://api.onedrive.com/v1.0/'}
+      options = {url: 'https://api.gooddata_connectors_onedrive.com/v1.0/'}
 
       @connection = Faraday.new(options) do |faraday|
         faraday.request :url_encoded # form-encode POST params
